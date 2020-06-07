@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         //be sure to replace "willbla" with your own Docker Hub username
-        DOCKER_IMAGE_NAME = "willbla/train-schedule"
+        DOCKER_IMAGE_NAME = "kaygee500/train-schedule"
     }
     stages {
         stage('Build') {
@@ -12,7 +12,9 @@ pipeline {
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
-        stage('Build Docker Image') {
+    }
+}
+        /*stage('Build Docker Image') {
             when {
                 branch 'master'
             }
@@ -53,4 +55,4 @@ pipeline {
             }
         }
     }
-}
+}*/
