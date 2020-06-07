@@ -12,9 +12,7 @@ pipeline {
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
-    }
-}
-        /*stage('Build Docker Image') {
+        stage('Build Docker Image') {
             when {
                 branch 'master'
             }
@@ -55,4 +53,4 @@ pipeline {
             }
         }
     }
-}*/
+}
